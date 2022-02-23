@@ -1,5 +1,5 @@
 @extends ('layouts.main')
 
 @section('content')
-    <h1>hello</h1>
+    @include('components.hero')
 @endsection

@@ -1,7 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body{
-    background-color: red;
-}
+@use './reset';
+// Bootstrap
+@use '~bootstrap/scss/bootstrap';
+@use '../css/components/header.scss';
+// @use '../css/components/hero.scss'
