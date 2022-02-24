@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
-});
+Route::get('/', [HomeController::class,'index']);
+
 
 Route::get('/movie', function () {
     return view('welcome');
@@ -42,8 +41,8 @@ Route::get('/thankyou', function () {
 });
 
 Route::get('/login', function () {
-    return view('welcome');
-});
+    return view('login');
+})->name('login');
 
 Route::get('/register', function () {
     return view('welcome');
@@ -52,10 +51,3 @@ Route::get('/register', function () {
 Route::get('/account/saved', function () {
     return view('welcome');
 });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
