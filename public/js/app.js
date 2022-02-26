@@ -5353,13 +5353,44 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/MobileMenu.js":
+/*!************************************!*\
+  !*** ./resources/js/MobileMenu.js ***!
+  \************************************/
+/***/ (() => {
+
+var hamburger = document.querySelector(".hamburger");
+var navMenu = document.querySelector(".nav-menu");
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+var navLink = document.querySelectorAll(".nav-link");
+navLink.forEach(function (n) {
+  return n.addEventListener("click", closeMenu);
+});
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+__webpack_require__(/*! ./MobileMenu */ "./resources/js/MobileMenu.js");
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+__webpack_require__(/*! ./slick */ "./resources/js/slick.js");
 
 /***/ }),
 
@@ -5396,6 +5427,50 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/slick.js":
+/*!*******************************!*\
+  !*** ./resources/js/slick.js ***!
+  \*******************************/
+/***/ (() => {
+
+$('.single-item').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000
+});
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 4,
+  prevArrow: $('.prev-movie'),
+  nextArrow: $('.next-movie'),
+  responsive: [{
+    breakpoint: 1024,
+    settings: {
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 3
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 1
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 1
+    }
+  }]
+});
 
 /***/ }),
 
