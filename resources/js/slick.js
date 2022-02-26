@@ -3,6 +3,8 @@ $('.single-item').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    prevArrow: $('.prev-hero'),
+    nextArrow: $('.next-hero'),
 });
 $('.center').slick({
     centerMode: true,
@@ -24,7 +26,7 @@ $('.center').slick({
         settings: {
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 1
+          slidesToShow: 2
         }
       },
       {

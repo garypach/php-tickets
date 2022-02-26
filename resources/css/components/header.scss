@@ -1,5 +1,5 @@
 .header{
-    border-bottom: 1px solid #E2E8F0;
+   
 
     button{
         display: none;
@@ -39,7 +39,7 @@
 .nav-link{
     font-size: 1.6rem;
     font-weight: 400;
-    color: #475569;
+    color: white;
     font-family: Jost;
 font-style: normal;
 font-weight: normal;
@@ -48,8 +48,6 @@ line-height: 14px;
 /* identical to box height, or 100% */
 
 letter-spacing: 2px;
-
-color: #333136;
 text-transform: uppercase;
 
 }
@@ -69,6 +67,7 @@ text-transform: uppercase;
     }
    
     .nav-menu {
+        z-index: 99;
         position: fixed;
         left: -100%;
         top: 3.9rem;

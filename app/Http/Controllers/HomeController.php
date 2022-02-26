@@ -40,8 +40,11 @@ class HomeController extends Controller
                 array_push($results, $item);
             }
         }
-        
-        return view('pages.home', compact('results') );
+
+
+        $heroImages = [$results[5],$results[1],$results[3]];
+
+        return view('pages.home', compact('results','heroImages') );
     }
 
 }

@@ -2,10 +2,31 @@
 // Bootstrap
 @use '~bootstrap/scss/bootstrap';
 @use '../css/components/header.scss';
-// @use '../css/components/hero.scss';
+@use '../css/components/hero.scss';
 @use '../css/components/MovieGrid.scss';
+@use '../css/components/promotions.scss';
 
-body{
-    background-color: gray;
+main::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    display: block;
+    background-image: url('https://image.tmdb.org/t/p/original/usaZV7KB6Man9Rm9TyDAeQf7uVD.jpg');
+    width: 100%;
+    height: 100vh;
+    
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(50px);
 }
-
+header{
+    background-color: black;
+}
+body{
+    background-color: black;
+}

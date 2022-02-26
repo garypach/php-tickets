@@ -11335,9 +11335,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.header {
-  border-bottom: 1px solid #E2E8F0;
-}
 .header button {
   display: none;
 }
@@ -11376,7 +11373,7 @@ textarea.form-control-lg {
 .nav-link {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #475569;
+  color: white;
   font-family: Jost;
   font-style: normal;
   font-weight: normal;
@@ -11384,7 +11381,6 @@ textarea.form-control-lg {
   line-height: 14px;
   /* identical to box height, or 100% */
   letter-spacing: 2px;
-  color: #333136;
   text-transform: uppercase;
 }
 
@@ -11402,6 +11398,7 @@ textarea.form-control-lg {
   }
 
   .nav-menu {
+    z-index: 99;
     position: fixed;
     left: -100%;
     top: 3.9rem;
@@ -11453,6 +11450,37 @@ textarea.form-control-lg {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+.prev-hero {
+  position: absolute;
+  left: 12px;
+  bottom: 50%;
+  width: 20px;
+  height: 30px;
+  z-index: 90;
+  background-color: #f44336;
+}
+
+.next-hero {
+  position: absolute;
+  right: 12px;
+  bottom: 50%;
+  width: 20px;
+  height: 30px;
+  z-index: 90;
+  background-color: #f44336;
+}
+
+.hero-slide {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-slide img {
+  width: 100%;
+  max-height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #movies-list {
   padding: 20px;
   width: 100%;
@@ -11510,6 +11538,73 @@ textarea.form-control-lg {
   font-size: 0.8rem;
 }
 
+.promotions-cont {
+  padding: 50px;
+  width: 100%;
+}
+.promotions-cont .promotions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.promotions-cont .promotions .promotions-image-cont {
+  width: 100%;
+}
+.promotions-cont .promotions .promotions-image-cont img {
+  width: 100%;
+  max-height: 480px;
+}
+.promotions-cont .promotions .promotions-text-cont {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 15px;
+}
+.promotions-cont .promotions .promotions-text-cont .promotions-text {
+  color: #ffff;
+  max-width: 80%;
+  font-size: 1.5vw;
+  margin: 0 0 1em;
+  line-height: 1.75em;
+}
+.promotions-cont .promotions .promotions-text-cont .promotions-text button {
+  background-color: #e51937;
+  border-color: transparent;
+  border-radius: 12px;
+  padding: 12px;
+  color: #ffff;
+}
+
+@media (min-width: 768px) {
+  .promotions-cont .promotions {
+    align-items: center;
+    flex-direction: row;
+  }
+  .promotions-cont .promotions .promotions-text-cont {
+    justify-content: center;
+  }
+}
+main::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("https://image.tmdb.org/t/p/original/usaZV7KB6Man9Rm9TyDAeQf7uVD.jpg");
+  width: 100%;
+  height: 100vh;
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(50px);
+}
+
+header {
+  background-color: black;
+}
+
 body {
-  background-color: gray;
+  background-color: black;
 }
