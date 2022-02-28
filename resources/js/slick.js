@@ -1,10 +1,21 @@
 $('.single-item').slick({
     slidesToShow: 1,
+    dots: true,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    arrows: true,
     prevArrow: $('.prev-hero'),
-    nextArrow: $('.next-hero'),
+    nextArrow: $('.next-hero'),    
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+         
+      }
+    }
+  ]
 });
 $('.center').slick({
     centerMode: true,

@@ -1,7 +1,6 @@
 @use './reset';
-// Bootstrap
-@use '~bootstrap/scss/bootstrap';
 @use '../css/components/header.scss';
+@use '../css/components/footer.scss';
 @use '../css/components/hero.scss';
 @use '../css/components/MovieGrid.scss';
 @use '../css/components/promotions.scss';

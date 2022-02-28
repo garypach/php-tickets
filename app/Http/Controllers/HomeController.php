@@ -42,7 +42,7 @@ class HomeController extends Controller
         }
 
 
-        $heroImages = [$results[5],$results[1],$results[3]];
+        $heroImages = [$results[5],$results[1],$results[2]];
 
         return view('pages.home', compact('results','heroImages') );
     }

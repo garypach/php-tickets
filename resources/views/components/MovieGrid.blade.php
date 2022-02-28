@@ -1,11 +1,10 @@
 <div id="movies-list">
-    <div class="row position-relative ">
+    <div class="row relative ">
         <div class="prev-movie">
         </div>
         <div class="next-movie">
         </div>
         <div class="center">
-           
             @foreach ($results as $item )
             <div class="movie-box">
                 <img style=" object-fit: cover;

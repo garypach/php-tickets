@@ -23,13 +23,19 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: #ffff;
 }
 .nav-menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+
+    h1{
+        font-size: 24px;
+        color: #ffff;
+        font-weight: 600;
+    }
 }
 
 .nav-item {
