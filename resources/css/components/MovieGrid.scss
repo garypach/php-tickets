@@ -3,22 +3,29 @@
     width: 100%;
 
     .prev-movie{
+      text-align: center;
+
       position: absolute;
-      left:0px;
+      left:12px;
+      font-size: 32px;
+      color: #ffff;
       bottom:50%;
-      width: 20px;
-      height: 30px;
+      width: 30px;
+      height: 33px;
       z-index: 99;
-      background-color: #f44336;
+      background-color: #e51937;
     }
     .next-movie{
+      text-align: center;
       position: absolute;
-      right:0px;
+      right:12px;
+      font-size: 32px;
+      color: #ffff;
       bottom:50%;
-      width: 20px;
-      height: 30px;
+      width: 30px;
+      height: 33px;
       z-index: 99;
-      background-color: #f44336;
+      background-color: #e51937;
     }
 }
 .movie-box{
@@ -30,7 +37,7 @@
   }
   .movie-box:hover .av{
     transform: translate3d(0,0,20px);
-    background-color: #f44336;
+    background-color: #e51937;
   }
   .movie-box .av{
     position: absolute;

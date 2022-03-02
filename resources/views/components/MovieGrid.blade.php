@@ -1,8 +1,10 @@
 <div id="movies-list">
     <div class="row relative ">
         <div class="prev-movie">
+            <i class="fa-solid fa-angle-left"></i>
         </div>
         <div class="next-movie">
+            <i class="fa-solid fa-angle-right"></i>
         </div>
         <div class="center">
             @foreach ($results as $item )

@@ -16,18 +16,24 @@
 </head>
 
 <body>
-    <header class="header">
+    <header>
+        <div class="header">
+            <div>
+                <a href="/">
+                <h1 class="logo">PHP</h1>
+                </a>
+            </div>
+        <div>
         <nav class="navbar">
             <ul class="nav-menu z-50">
-                <h1>PHP</h1>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">STORIES</a>
+                    <a href="#" class="nav-link">Movies</a>
                 </li>
                 <li class="nav-item ">
-                    <a href="#" class="nav-link">FEATURES</a>
+                    <a href="#" class="nav-link">Theaters</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">PRICING</a>
+                    <a href="#" class="nav-link">Food</a>
                 </li>
             </ul>
             <button>
@@ -38,6 +44,11 @@
                 </div>
             </button>
         </nav>
+        </div>
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        </div>
     </header>     
     <main>         
     @yield('content')

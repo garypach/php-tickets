@@ -1,8 +1,30 @@
 .header{
-   
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    .logo{
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        z-index: 98;
+        max-width: fit-content;
+        margin-left: 25px;
+    }
     button{
         display: none;
+    }
+
+    .fa-solid{
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        z-index: 98;
+        max-width: fit-content;
+        margin-right: 25px;
+        cursor: pointer;
     }
 }
 
@@ -29,13 +51,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-
-    h1{
-        font-size: 24px;
-        color: #ffff;
-        font-weight: 600;
-    }
+    width: 50%;
 }
 
 .nav-item {
@@ -56,6 +72,10 @@ line-height: 14px;
 letter-spacing: 2px;
 text-transform: uppercase;
 
+&:hover{
+    color: rgb(0, 162, 255);
+}
+
 }
 
 .nav-logo {
@@ -66,12 +86,33 @@ text-transform: uppercase;
 }
 @media only screen and (max-width: 768px) {
     .header{
+        flex-direction: row;
+        justify-content: flex-start;
+        .logo{
+            margin-left: auto;
+            position: absolute;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 32%;
+            text-align: center;
+        }
         button{
             display: block;
+            z-index: 99;
             border: none;
         }
+
+        .fa-solid{
+            color:white;
+            margin-left: auto;
+            position: absolute;
+            margin-right: auto;
+            right: 25px;
+            top: 32%;
+            text-align: center;
+        }
     }
-   
     .nav-menu {
         z-index: 99;
         position: fixed;

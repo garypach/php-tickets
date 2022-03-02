@@ -9,6 +9,7 @@
     background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);   }
 }
     .prev-hero{
+      cursor: pointer;
       display: none;
         position: absolute;
         font-size: 32px;
@@ -20,6 +21,7 @@
         color: white;
       }
       .next-hero{
+        cursor: pointer;
         display: none;
         position: absolute;
         bottom:10%;
@@ -33,10 +35,31 @@
       }
 .hero-slide{
     object-fit: cover;
+    position: relative;
     img{
         width: 100%;
         max-height: 500px;
         object-fit: cover;
+    }
+
+    .text{
+      position: absolute;
+      bottom: 30%;
+      z-index: 99;
+      color: white;
+      max-width: 200px;
+      font-size: .5em;
+      line-height: 1.25;
+      margin-left: 20px;
+      button{
+        background-color: #e51937;
+border-color: transparent;
+        border-radius: 12px;
+        padding: 8px;
+        color: #ffff;
+        font-size: 7px;
+        margin-top: 10px;
+    }
     }
 }
 .slick-dots li.slick-active button::before{
@@ -53,6 +76,24 @@
   bottom: 10% !important;
 }
 
+@media (min-width: 575px) {
+  .hero-slide{
+  
+    .text{
+      font-size: .6em;
+      max-width: 400px;
+
+      button{
+        font-size: 1em;
+  
+    }
+    }
+  }
+  
+ 
+}
+
+
 @media (min-width: 768px) {
   .prev-hero{
     display: block;
@@ -61,7 +102,40 @@
   .next-hero{
     display: block;
   }
+
+  .hero-slide{
+  
+    .text{
+      font-size: 1em;
+      max-width: 500px;
+
+      button{
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+    }
+  }
+ 
 }
+
+@media (min-width: 1024px) {
+
+  .hero-slide{
+  
+    .text{
+      font-size: 1em;
+      max-width: 800px;
+
+      button{
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+    }
+  }
+ 
+}
+
+
 
 
 
