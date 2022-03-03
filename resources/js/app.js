@@ -1,2 +1,6 @@
-require('./MobileMenu')
-require('./slick')
+
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
