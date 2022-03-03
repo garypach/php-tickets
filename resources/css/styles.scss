@@ -4,7 +4,8 @@
 @use '../css/components/hero.scss';
 @use '../css/components/MovieGrid.scss';
 @use '../css/components/promotions.scss';
-
+@use '../css/components/register.scss';
+@use '../css/components/login.scss';
 
 main::before{
     content: "";

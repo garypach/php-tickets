@@ -18,6 +18,7 @@
 <body>
     <header>
         <div class="header">
+            @yield('form-content')
             <div>
                 <a href="/">
                 <h1 class="logo">PHP</h1>

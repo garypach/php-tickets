@@ -1,0 +1,98 @@
+.login-cont{
+    position: absolute;
+    width: 100%;
+    top:-1000%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transition: 1s all ease-in-out;
+    &.active{
+      top: 150%;
+    }
+    .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1000px;
+        // min-height: calc(100vh - 104px);
+        &__form{
+          padding: 30px;
+          width: 100%;
+          background: black;
+        }
+        &-title{
+          font-weight: 700;
+          font-size: 1.2rem;
+          text-align: left;
+          margin-bottom:2rem;
+          color: white;
+        }
+        &__form-group{
+          margin-bottom:1rem;
+          display: flex;
+          flex-direction: column;
+        }
+        &__form-label{
+          font-weight: 700;
+          font-size: .9rem;
+          margin-bottom: .5rem;
+        }
+        &__form-input{
+          padding: 0 15px;
+          height: 40px;
+          display: flex;
+          justify-content:center;
+          align-items: center;
+          border-bottom: 1px solid rgb(205, 209, 212);
+          background: none;
+          color: #ffff;
+          margin-right: .5rem;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+          font-weight: 600;
+        }
+        &-button{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 40px;
+        }
+        &__form-button{
+          padding: 0 15px;
+          height: 40px;
+          display: flex;
+          justify-content:center;
+          align-items: center;
+          background: #ffff;
+          color:black;
+          width: 100%;
+          max-width: 300px;
+          transition: all .2s ease-in-out;
+
+          &:hover{
+            color: white;
+            background: rgb(0, 162, 255);
+          }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .login-cont{
+        .login{
+            &-button{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+  
+}

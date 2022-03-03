@@ -1,6 +1,9 @@
 @extends ('layouts.main')
 
-
+@section('form-content')
+    @include('components.LoginForm')
+    @include('components.RegisterForm')
+@endsection
 @section('content')
     @include('components.hero')
     @include('components.MovieGrid')
